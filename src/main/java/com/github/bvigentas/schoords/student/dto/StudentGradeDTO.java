@@ -7,6 +7,8 @@ public class StudentGradeDTO {
 
     private Long idStudent;
     private Long idSubject;
+    private Long idProfessor;
+    private Long idSemester;
     private Double value;
 
 }

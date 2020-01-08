@@ -1,6 +1,8 @@
 package com.github.bvigentas.schoords.grade.entity;
 
 import com.github.bvigentas.schoords.entity.BaseEntity;
+import com.github.bvigentas.schoords.professor.entity.Professor;
+import com.github.bvigentas.schoords.semester.entity.Semester;
 import com.github.bvigentas.schoords.student.entity.Student;
 import com.github.bvigentas.schoords.subject.entity.Subject;
 import lombok.AllArgsConstructor;
@@ -26,6 +28,14 @@ public class Grade extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "subject_id", referencedColumnName = "id")
     private Subject subject;
+
+    @ManyToOne
+    @JoinColumn(name = "professor_id", referencedColumnName = "id")
+    private Professor professor;
+
+    @ManyToOne
+    @JoinColumn(name = "semester_id", referencedColumnName = "id")
+    private Semester semester;
 
     private Double value;
 
